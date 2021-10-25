@@ -21,11 +21,17 @@ public class T07Afraction {
     //method ini digunakan untuk melakukan perkalian pecahan
     static void productFraction(int e1, int d1, int e2, int d2) {
         int ep, dp, x;
-        ep = e1 * e2;
-        dp = d1 * d2;
-        x = simplyFraction(ep, dp);
+        ep = e1 * e2; //kalikan e1 dengan e2 untuk mendapatkan ep sebagai pembilang
+        dp = d1 * d2; //kalikan d1 dengan d2 untuk mendapatkan dp sebagai penyebut
+        
+        //panggil method simplyFraction() untuk mencari faktor pembagi pecahan
+        x = simplyFraction(ep, dp); 
+        
+        //bagi pecahan yang telah dicari dengan faktor pembagi x
         ep = ep / x;
         dp = dp / x;
+        
+        //cetak hasil penyederhanaan pecahan
         printFraction(ep, dp);
     }
 
